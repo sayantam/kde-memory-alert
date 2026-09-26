@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=KDE Memory Alert
+Comment=Warn when system RAM usage exceeds the threshold
+Exec="@APP_EXEC@"
+Icon=hwinfo
+Terminal=false
+Categories=Qt;KDE;System;Monitor;
+StartupNotify=false

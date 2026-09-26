@@ -1,0 +1,4 @@
+/build*/
+/stage/
+*.user
+__pycache__/

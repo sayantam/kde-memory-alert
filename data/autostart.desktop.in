@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=KDE Memory Alert
+Comment=Monitor system RAM usage at login
+Exec="@APP_EXEC@"
+Icon=hwinfo
+Terminal=false
+OnlyShowIn=KDE;
+StartupNotify=false
