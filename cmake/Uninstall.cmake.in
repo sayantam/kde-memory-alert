@@ -1,0 +1,15 @@
+# Remove only this application's three files; never remove shared directories.
+set(paths
+    "@KDE_INSTALL_FULL_BINDIR@/kde-memory-alert"
+    "@MEMORY_ALERT_DATA_HOME@/applications/@APP_DESKTOP_ID@"
+    "@MEMORY_ALERT_CONFIG_HOME@/autostart/@APP_DESKTOP_ID@")
+foreach(path IN LISTS paths)
+    set(path "$ENV{DESTDIR}${path}")
+    if(EXISTS "${path}" OR IS_SYMLINK "${path}")
+        message(STATUS "Removing ${path}")
+        file(REMOVE "${path}")
+        if(EXISTS "${path}" OR IS_SYMLINK "${path}")
+            message(FATAL_ERROR "Could not remove ${path}")
+        endif()
+    endif()
+endforeach()
